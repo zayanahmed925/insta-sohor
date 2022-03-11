@@ -1,85 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Insta-Sohor</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <!-- Latest compiled and minified CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous"
-        />
 
-        <!-- google Montserrat  font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-                <a class="navbar-brand" href="#">Insta-Sohor</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-                <div
-                    class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
-                            <i class="fa-solid fa-house"></i>
-                        </li>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+            <a class="navbar-brand" href="#">Insta-Sohor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
-                            <i class="fa-solid fa-heart text-danger"></i>
-                        </li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                        <i class="fa-solid fa-house"></i>
+                    </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="main container mx-auto p-3">
-            <div id="posts">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                        <i class="fa-solid fa-heart text-danger"></i>
+                    </li>
+
+                    <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </li>
+                </ul>
             </div>
-            <div id="liked">
-                <h1>Liked posts</h1>
-            </div>
+        </nav>
+    </header>
+    <main class="main container mx-auto p-3">
+        <div id="posts">
+        </div>
+        <div id="liked">
+            <h1>Liked posts</h1>
+        </div>
 
-            <div id="reported">
-                <h1>Reported posts</h1>
-            </div>
-        </main>
-        <footer></footer>
+        <div id="reported">
+            <h1>Reported posts</h1>
+        </div>
+    </main>
+    <section id="question" class="container border my-5">
+        <h3>Q1: How does javascript work?</h3>
+        <p>জাভাস্ক্রিপ্ট একটি client-side scripting language।যা web-browser এর ভিতরে client side এ চলে। প্রতিটি পপুলার
+            web-browser এর নিজস্ব জাভাস্ক্রিপ্ট ইঞ্জিন রয়েছে।যখন browser এ জাভাস্ক্রিপ্ট কোড রান করে তখন ইঞ্জিন
+            'parser'দ্বারা syntatic error না পাইলে,AST নামের data structure তৈরি করে,কোডটিকে মেশিন কোডে রুপান্তরিত করে
+            সিস্টেম এ পাঠানো হয়। এবং পরিশেষে byte-code টি সিস্টেম বা ইঞ্জিন দ্বারা run হয়।</p>
+        <h3>Q2: What does javascript event loop do?</h3>
+        <p>জাভাস্ক্রিপ্ট single thread এ সব operation execute করে। ইভেন্ট লুপের কাজ হচ্ছে এটি ক্রমাগত চেক করে যে Call
+            stack খালি কিনা, খালি থাকলে
+            ক্রমাগত event queue থেকে প্রথম ইভেন্টটি নিয়ে এটিকে কল স্ট্যাকে push করে দিবে এবং ঠিক মতো execute করবে।
+            খালি না থাকলে current processed হওয়া function গুলি execute হইতে থাকে। এবং প্রতিটি function execute হওয়ার পর
+            stack থেকে pop করে দেয়। </p>
+        <h3> Q3: difference between local storage and session storage?</h3>
+        <ul>Local Storage:
+            <li>Local Storage এর data নতুন ট্যাব ওপেন করা অথবা Browser বন্ধ করে পুনরায় খোলা হলেও data সেভ হয়ে থাকে।
+            </li>
+            <li>কোন ‍নির্দিষ্ট ট্যাব এর জন্য কাজ করে না।</li>
+            <li>Local Storage এ data যেভাবে set করা হয় (localStorage.setItem('mango',50))</li>
+            <li>Data নিজ হাতে delete করতে হয়।</li>
+        </ul>
+        <ul>Session Storage:
+            <li>Session Storage এর data যতক্ষণ ট্যাব বা ব্রাউজার খোলা থাকে ততক্ষণ স্থায়ী হয়,এইগুলো বন্ধ হলে data চলে
+                যাবে।</li>
+            <li>যে কোন নির্দিষ্ট ট্যাব এর জন্য কাজ করে।ওই ট্যাব বন্ধ করলে data চলে যায়</li>
+            <li>Session Storage এ data যেভাবে set করা হয় (sessionStorage.setItem('mango',50))</li>
+            <li>ব্রাউজার অথবা ট্যাব বন্ধ করলে data মুছে যায়। </li>
+        </ul>
 
-        <!-- add javascript  file  -->
-        <script src="./js/app.js"></script>
-    </body>
+    </section>
+    <footer></footer>
+
+    <!-- add javascript  file  -->
+    <script src="./js/app.js"></script>
+</body>
+
 </html>

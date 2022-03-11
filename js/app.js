@@ -1,7 +1,7 @@
 let posts = [];
 
-const likedPostsId = [];
-const reportedPostsId = [];
+let likedPostsId = [];
+let reportedPostsId = [];
 
 const getLikedPosts = () => {
   return posts.filter((post) => likedPostsId.includes(post.id));
@@ -31,6 +31,7 @@ const displayContent = (text) => {
 };
 
 const switchTab = (id) => {
+  document.getElementById("question").style.display = 'block';
   if (id === "posts") {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
@@ -144,21 +145,22 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
   const likedPosts = getLikedPosts();
-  document.getElementById("liked").innerHTML = '';
+  document.getElementById("question").style.display = 'none';
   likedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
   });
+  likedPostsId = [];
 };
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
-  document.getElementById("reported").innerHTML = '';
-  // console.log(reportedPosts)
+  document.getElementById("question").style.display = 'none';
   reportedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
+  reportedPostsId = [];
 };
 
 const loadPosts = async () => {
